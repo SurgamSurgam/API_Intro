@@ -336,7 +336,13 @@ document.addEventListener("DOMContentLoaded", () => {
     body.append(div);
     let header = document.createElement('h2');
     header.innerText = picked;
-    div.appendChild(header);
+    div.append(header);
+    button.innerText = 'Another One!';
+
+    if (div.previousSibling !== '#text') {
+      div.previousSibling.remove();
+    }
+
 
   })
 
